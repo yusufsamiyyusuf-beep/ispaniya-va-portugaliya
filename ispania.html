@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ispaniya Qirolligi | Pireney Yarimoroli</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .page-header {
+            height: 60vh;
+            background: linear-gradient(rgba(15, 76, 129, 0.7), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1543783207-ecc64e43af71?ixlib=rb-4.0.3&w=1920&q=80') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-align: center;
+            padding-top: var(--nav-height);
+        }
+
+        .page-header h1 {
+            color: var(--white);
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .content-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .content-section.reverse {
+            direction: rtl;
+        }
+
+        .content-section.reverse > * {
+            direction: ltr;
+        }
+
+        @media (max-width: 768px) {
+            .content-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .text-box {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+        }
+
+        .text-box ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            color: var(--text-light);
+        }
+
+        .text-box li {
+            margin-bottom: 10px;
+        }
+
+        .img-box img {
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+            height: 400px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .stat-card {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+        }
+
+        .stat-card i {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .stat-card h3 {
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .stat-card p {
+            color: rgba(255,255,255,0.8);
+            margin: 0;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-globe-europe"></i> Pireney
+            </a>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-link">Bosh sahifa</a></li>
+                    <li><a href="ispania.html" class="nav-link">Ispaniya</a></li>
+                    <li><a href="portugaliya.html" class="nav-link">Portugaliya</a></li>
+                    <li><a href="taqqoslash.html" class="nav-link">Taqqoslash</a></li>
+                    <li><a href="geografiya.html" class="nav-link">Geografiya</a></li>
+                    <li><a href="galereya.html" class="nav-link">Galereya</a></li>
+                    <li><a href="xulosa.html" class="nav-link">Xulosa</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="fade-in">
+            <h1>Ispaniya Qirolligi</h1>
+            <p>Quyoshli plyajlar, qadimiy arxitektura va boy madaniyat o'lkasi</p>
+        </div>
+    </section>
+
+    <div class="container section-padding">
+        
+        <!-- Quick Stats -->
+        <div class="stats-grid fade-in">
+            <div class="stat-card">
+                <i class="fas fa-city"></i>
+                <h3>Poytaxti</h3>
+                <p>Madrid</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-users"></i>
+                <h3>Aholisi</h3>
+                <p>~48 million</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-language"></i>
+                <h3>Tili</h3>
+                <p>Ispan tili</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-coins"></i>
+                <h3>Pul Birligi</h3>
+                <p>Yevro (€)</p>
+            </div>
+        </div>
+
+        <!-- Geo & Climate -->
+        <div class="content-section fade-in">
+            <div class="text-box">
+                <h2>Geografik Joylashuvi va Iqlimi</h2>
+                <p>Ispaniya Yevropaning janubi-g'arbiy qismida, Pireney yarimorolining taxminan 80 foizini egallaydi. Uning Shimoliy Afrikada anklavlari, O'rta dengizda Balear orollari va Atlantika okeanida Kanar orollari mavjud.</p>
+                <p><strong>Iqlimi:</strong> Turli tuman. Sohil bo'ylarida O'rta dengiz iqlimi, ichki hududlarda kontinental, shimoli-g'arbiy qismida esa okean iqlimi hukm suradi. Yoz oylari janub va sharqda juda issiq bo'ladi.</p>
+            </div>
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1511527661048-7fe73d85e9a4?ixlib=rb-4.0.3&w=800&q=80" alt="Ispaniya tabiati">
+            </div>
+        </div>
+
+        <!-- Economy & Tourism -->
+        <div class="content-section reverse fade-in">
+            <div class="text-box">
+                <h2>Iqtisodiyoti va Turizm</h2>
+                <p>Ispaniya iqtisodiyoti dunyoda eng yiriklaridan biri sanaladi. U qishloq xo'jaligi, zamonaviy ishlab chiqarish korxonalari va kuchli xizmat ko'rsatish sohasiga asoslangan.</p>
+                <p><strong>Turizm:</strong> Ispaniya dunyodagi eng ko'p sayyoh tashrif buyuradigan davlatlardan biridir. Madaniy merosi, tarixiy shaharlari va toza dengiz bo'yi hududlari (Kosta Brava, Kosta del Sol) har yili millionlab odamlarni jalb qiladi.</p>
+            </div>
+            <div class="img-box">
+                <img src="https://keystoneacademic-res.cloudinary.com/image/upload/c_fill,w_3840,h_1645,g_auto/dpr_auto/f_auto/q_auto/v1/element/11/110855_shutterstock_377505535.jpg" alt="Ispaniya turizm">
+            </div>
+        </div>
+
+        <!-- Cities & Culture -->
+        <div class="content-section fade-in">
+            <div class="text-box">
+                <h2>Mashhur Shaharlar va Madaniyat</h2>
+                <p>Ispaniyaning madaniyati uning arxitekturasida, raqslarida (Flamenko), oshxonasida (Paella, Tapas) yaqqol namoyon bo'ladi.</p>
+                <ul>
+                    <li><strong>Madrid:</strong> Poytaxt va yirik madaniyat markazi. Prado muzeyi bilan mashhur.</li>
+                    <li><strong>Barselona:</strong> Antoni Gaudi arxitekturasi va noyob kosmopolit ruhiyati.</li>
+                    <li><strong>Sevilya:</strong> Flamenko markazi va tarixiy obidalar maskani.</li>
+                    <li><strong>Valensiya:</strong> Texnologiya va qadimiyat mutanosibligi.</li>
+                </ul>
+            </div>
+            <div class="img-box">
+                <img src="https://c.files.bbci.co.uk/03DB/production/_97778900_df00cf9e-2d5a-4cf8-8961-480156a86e5c.jpg" alt="Barselona Sagrada Familia">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+                <p>&copy; 2026 Pireney Yarimoroli Ta'lim Loyihasi. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

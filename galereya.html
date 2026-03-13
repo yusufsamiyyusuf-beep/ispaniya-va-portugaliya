@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galereya | Pireney Yarimoroli</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .page-header {
+            height: 40vh;
+            background: linear-gradient(rgba(15, 76, 129, 0.8), rgba(15, 76, 129, 0.8));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-align: center;
+            padding-top: var(--nav-height);
+        }
+
+        .gallery-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .gallery-filter {
+            padding: 8px 20px;
+            border: 2px solid var(--primary-color);
+            border-radius: 30px;
+            background: transparent;
+            color: var(--primary-color);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all var(--transition-speed) ease;
+        }
+
+        .gallery-filter.active, .gallery-filter:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-auto-rows: 250px;
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Responsive grid span for masonry effect */
+        @media(min-width: 768px) {
+            .item-wide {
+                grid-column: span 2;
+            }
+            .item-tall {
+                grid-row: span 2;
+            }
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 20px;
+            color: white;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gallery-overlay h3 {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+        }
+        
+        .gallery-overlay h3::after {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-globe-europe"></i> Pireney
+            </a>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-link">Bosh sahifa</a></li>
+                    <li><a href="ispania.html" class="nav-link">Ispaniya</a></li>
+                    <li><a href="portugaliya.html" class="nav-link">Portugaliya</a></li>
+                    <li><a href="taqqoslash.html" class="nav-link">Taqqoslash</a></li>
+                    <li><a href="geografiya.html" class="nav-link">Geografiya</a></li>
+                    <li><a href="galereya.html" class="nav-link active">Galereya</a></li>
+                    <li><a href="xulosa.html" class="nav-link">Xulosa</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="fade-in">
+            <h1 style="color: white; font-size: 2.5rem;">Fotogalereya</h1>
+            <p style="color: rgba(255,255,255,0.8);">Yarimorolning manzaralari va madaniy obidalari</p>
+        </div>
+    </section>
+
+    <div class="container section-padding">
+
+        <div class="gallery-nav fade-in">
+            <button class="gallery-filter active" data-filter="all">Barchasi</button>
+            <button class="gallery-filter" data-filter="spain">Ispaniya</button>
+            <button class="gallery-filter" data-filter="portugal">Portugaliya</button>
+            <button class="gallery-filter" data-filter="nature">Tabiat</button>
+        </div>
+
+        <div class="gallery-grid fade-in">
+            <!-- Spain City -->
+            <div class="gallery-item item-wide" data-category="spain">
+                <img src="https://images.contentstack.io/v3/assets/blt06f605a34f1194ff/blt964a8b2f7ce2f11d/679fa8e78ccf5e47f813811f/BCC-2024-EXPLORER-MADRID-GETTING-AROUND-HEADER_MOBILE.jpg?format=webp&auto=avif&quality=60&crop=4%3A3&width=1440" alt="Madrid">
+                <div class="gallery-overlay"><h3>Madrid, Ispaniya</h3></div>
+            </div>
+
+            <!-- Portugal City -->
+            <div class="gallery-item" data-category="portugal">
+                <img src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?ixlib=rb-4.0.3&w=800&q=80" alt="Lissabon">
+                <div class="gallery-overlay"><h3>Lissabon, Portugaliya</h3></div>
+            </div>
+
+            <!-- Portugal Architecture / Tall -->
+            <div class="gallery-item item-tall" data-category="portugal">
+                <img src="https://acrossportugal.com/upload/Sintra-Palacio-da-Pena_1168465315-Istock-XXG_29012021093726.jpg" alt="Sintra">
+                <div class="gallery-overlay"><h3>Sintra Qal'asi, Portugaliya</h3></div>
+            </div>
+
+            <!-- Nature -->
+            <div class="gallery-item" data-category="nature">
+                <img src="https://images.unsplash.com/photo-1511527661048-7fe73d85e9a4?ixlib=rb-4.0.3&w=800&q=80" alt="Pyrenees Mountains">
+                <div class="gallery-overlay"><h3>Pireney tog'lari, Tabiat</h3></div>
+            </div>
+
+            <!-- Spain Architecture -->
+            <div class="gallery-item" data-category="spain">
+                <img src="https://cdn.britannica.com/15/194815-050-08B5E7D1/Nativity-facade-Sagrada-Familia-cathedral-Barcelona-Spain.jpg" alt="Sagrada Familia">
+                <div class="gallery-overlay"><h3>Sagrada Familia, Barselona</h3></div>
+            </div>
+
+            <!-- Nature / Ocean -->
+            <div class="gallery-item item-wide" data-category="nature">
+                <img src="https://images.unsplash.com/photo-1500835556837-99ac94a94552?ixlib=rb-4.0.3&w=800&q=80" alt="Algarve">
+                <div class="gallery-overlay"><h3>Algarve sohili, Portugaliya</h3></div>
+            </div>
+
+            <!-- Spain Historical -->
+            <div class="gallery-item" data-category="spain">
+                <img src="https://cdn-imgix.headout.com/media/images/96b67a0d24abee1e70fb3817103f9f96-alhambra-50.jpg?w=1041.6000000000001&h=651&crop=faces&auto=compress%2Cformat&fit=min" alt="Alhambra">
+                <div class="gallery-overlay"><h3>Algambra, Granada (Ispaniya)</h3></div>
+            </div>
+
+            <!-- Portugal City -->
+            <div class="gallery-item" data-category="portugal">
+                <img src="https://www.anyworkanywhere.com/wp-content/uploads/elementor/thumbs/Werken-in-Porto-20-qq2xfv1tjizvlkl1fjzf2ki1v59h8rvpwbxs4016mg.jpg" alt="Porto">
+                <div class="gallery-overlay"><h3>Portu shahri, Portugaliya</h3></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+                <p>&copy; 2026 Pireney Yarimoroli Ta'lim Loyihasi. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Simple Gallery Filter logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const filters = document.querySelectorAll('.gallery-filter');
+            const items = document.querySelectorAll('.gallery-item');
+
+            filters.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // remove active class
+                    filters.forEach(f => f.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    items.forEach(item => {
+                        if(filterValue === 'all') {
+                            item.style.display = 'block';
+                        } else {
+                            if(item.getAttribute('data-category') === filterValue) {
+                                item.style.display = 'block';
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

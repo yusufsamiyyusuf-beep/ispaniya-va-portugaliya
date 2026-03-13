@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taqqoslash: Ispaniya va Portugaliya</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .page-header {
+            height: 40vh;
+            background: linear-gradient(rgba(15, 76, 129, 0.8), rgba(15, 76, 129, 0.8));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-align: center;
+            padding-top: var(--nav-height);
+        }
+
+        .comparison-table-wrapper {
+            overflow-x: auto;
+            margin-top: 40px;
+            box-shadow: var(--shadow-lg);
+            border-radius: var(--border-radius);
+            background-color: var(--white);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 20px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .comparison-table th {
+            background-color: var(--primary-color);
+            color: var(--white);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .comparison-table th:first-child {
+            width: 20%;
+            background-color: #0c3d68; /* slightly darker for the criteria column */
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:hover td {
+            background-color: var(--bg-light);
+        }
+
+        .flag-icon {
+            width: 40px;
+            border-radius: 4px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .table-header-cell {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-globe-europe"></i> Pireney
+            </a>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-link">Bosh sahifa</a></li>
+                    <li><a href="ispania.html" class="nav-link">Ispaniya</a></li>
+                    <li><a href="portugaliya.html" class="nav-link">Portugaliya</a></li>
+                    <li><a href="taqqoslash.html" class="nav-link active">Taqqoslash</a></li>
+                    <li><a href="geografiya.html" class="nav-link">Geografiya</a></li>
+                    <li><a href="galereya.html" class="nav-link">Galereya</a></li>
+                    <li><a href="xulosa.html" class="nav-link">Xulosa</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="fade-in">
+            <h1 style="color: white; font-size: 2.5rem;">Ispaniya va Portugaliya Taqqoslashi</h1>
+            <p style="color: rgba(255,255,255,0.8);">Ikki hudud, o'xshashliklar va farqlar</p>
+        </div>
+    </section>
+
+    <div class="container section-padding">
+        <div class="fade-in text-center" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <h2>Asosiy Ko'rsatkichlar</h2>
+            <p>Quyidagi jadval orqali Pireney yarimorolining ikki yetakchi davlatidagi ijtimoiy-iqtisodiy va geografik farqlarni ko'rishingiz mumkin.</p>
+        </div>
+
+        <div class="comparison-table-wrapper fade-in" style="transition-delay: 0.2s;">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Mezon</th>
+                        <th>
+                            <div class="table-header-cell">
+                                <img src="https://flagcdn.com/w40/es.png" alt="Ispaniya" class="flag-icon"> Ispaniya
+                            </div>
+                        </th>
+                        <th>
+                            <div class="table-header-cell">
+                                <img src="https://flagcdn.com/w40/pt.png" alt="Portugaliya" class="flag-icon"> Portugaliya
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Maydoni</strong></td>
+                        <td>505,990 km² <br><small>(Yarimorolning 80% qismi)</small></td>
+                        <td>92,212 km² <br><small>(Yarimorolning qolgan yirik qismi)</small></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Aholisi</strong></td>
+                        <td>~48 million kishi</td>
+                        <td>~10.3 million kishi</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Poytaxti</strong></td>
+                        <td>Madrid</td>
+                        <td>Lissabon</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Rasmiy Tili</strong></td>
+                        <td>Ispan tili (Kastil), shuningdek mintaqaviy tillar (Katalan, Bask)</td>
+                        <td>Portugal tili</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Iqtisodiyoti</strong></td>
+                        <td>Yevropada 4-chi yirik (YIM: ~$1.4 trln). Qishloq xo'jaligi, avtosanoat, turizm kuchli.</td>
+                        <td>O'rta kattalikda (YIM: ~$250 mlrd). To'qimachilik, vinochilik, texnologiyalar, turizm.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Turizm</strong></td>
+                        <td>Dunyoning eng ko'p ziyorat qilinadigan davlatlaridan (yiliga ~85 mln).</td>
+                        <td>Tez o'sib borayotgan yo'nalish (yiliga ~27 mln). Sohili va arzonligi bilan mashhur.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tarixi</strong></td>
+                        <td>Gabsburglar va Burbonlar sulolasi, kuchli Rim imperiyasi va Arab (Andalusiya) ta'siri.</td>
+                        <td>Ilk tan olingan chegara (1143-y). Buyuk geografik kashfiyotlar asrining yetakchisi.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+                <p>&copy; 2026 Pireney Yarimoroli Ta'lim Loyihasi. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

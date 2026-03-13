@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pireney yarimoroli mamlakatlari: Ispaniya va Portugaliya</title>
+    <!-- Include FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        /* Specific Home Page Styles */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(15, 76, 129, 0.7), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1543783207-ecc64e43af71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+            margin-top: 0;
+            padding-top: var(--nav-height);
+        }
+        
+        .hero-content h1 {
+            color: var(--white);
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            color: var(--white);
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+        
+        .btn-white:hover {
+            background-color: var(--bg-light);
+            color: var(--primary-color);
+        }
+
+        .overview {
+            background-color: var(--bg-light);
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .card-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .intro-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            font-size: 1.1rem;
+            color: var(--text-main);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-globe-europe"></i> Pireney
+            </a>
+            
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button> <!-- Hamburger specifically id'd just in case -->
+
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-link">Bosh sahifa</a></li>
+                    <li><a href="ispania.html" class="nav-link">Ispaniya</a></li>
+                    <li><a href="portugaliya.html" class="nav-link">Portugaliya</a></li>
+                    <li><a href="taqqoslash.html" class="nav-link">Taqqoslash</a></li>
+                    <li><a href="geografiya.html" class="nav-link">Geografiya</a></li>
+                    <li><a href="galereya.html" class="nav-link">Galereya</a></li>
+                    <li><a href="xulosa.html" class="nav-link">Xulosa</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content fade-in">
+            <h1>Pireney Yarimoroli Mamlakatlari</h1>
+            <p>Yevropaning janubi-g'arbiy qismida joylashgan boy tarixga, go'zal tabiatga va betakror madaniyatga ega bo'lgan Ispaniya va Portugaliya kashfiyoti.</p>
+            <div class="hero-buttons">
+                <a href="ispania.html" class="btn btn-white">Ispaniya bilan tanishish</a>
+                <a href="portugaliya.html" class="btn">Portugaliya bilan tanishish</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="overview section-padding">
+        <div class="container">
+            <h2 class="fade-in" style="text-align: center; display: block; margin-bottom: 2rem;">Yarimorol Haqida Qisqacha</h2>
+            <p class="intro-text fade-in">
+                Pireney yarimoroli (Iberiya yarimoroli ham deyiladi) Yevropaning janubi-g'arbida joylashgan. U materik Yevropadan Pireney tog'lari orqali ajralib turadi. Yarimorol asosan uchta davlat – Ispaniya, Portugaliya va kichik Andorra davlatini, shuningdek Buyuk Britaniyaga qarashli Gibraltar hududini o'z ichiga oladi. O'zbek tilidagi bu ta'lim saytida biz yarimorolning asosiy ikki kuchli davlati Ispaniya va Portugaliya bilan kengroq tanishamiz.
+            </p>
+
+            <div class="cards-grid">
+                <!-- Spain Card -->
+                <div class="card fade-in">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvOgPrik1tQvX8Owx1c4toyiXWwffzO3P5pw&s" alt="Ispaniya" class="card-img">
+                    <div class="card-content">
+                        <h3 class="card-title">Ispaniya</h3>
+                        <p>Ispaniya san'at ustalarining vatani, flamenko raqsi va rang-barang bayramlar o'lkasi. Yarimorolning katta qismini egallaydi.</p>
+                        <a href="ispania.html" class="btn btn-outline" style="width: 100%; margin-top: 15px;">Batafsil</a>
+                    </div>
+                </div>
+
+                <!-- Portugal Card -->
+                <div class="card fade-in" style="transition-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Portugaliya" class="card-img">
+                    <div class="card-content">
+                        <h3 class="card-title">Portugaliya</h3>
+                        <p>Buyuk geografik kashfiyotlar peshqadami. O'ziga xos fado musiqasi, sohil bo'yi go'zalliklari va tarixiy merosi bilan mashhur.</p>
+                        <a href="portugaliya.html" class="btn btn-outline" style="width: 100%; margin-top: 15px;">Batafsil</a>
+                    </div>
+                </div>
+
+                <!-- Geography Card -->
+                <div class="card fade-in" style="transition-delay: 0.4s;">
+                    <img src="https://images.unsplash.com/photo-1517400508447-f8dd518b86db?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Geografiya" class="card-img">
+                    <div class="card-content">
+                        <h3 class="card-title">Geografiyasi</h3>
+                        <p>Betakror tabiat, baland tog'lar va uzoq qirg'oq chiziqlari. Iqlimi O'rta dengiz issiqligi va Atlantika okeani salqinidan iborat.</p>
+                        <a href="geografiya.html" class="btn btn-outline" style="width: 100%; margin-top: 15px;">Batafsil</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3><i class="fas fa-globe-europe"></i> Pireney</h3>
+                    <p>Pireney yarimoroli mamlakatlari bo'yicha ta'limiy va interaktiv resurs.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Sahifalar</h3>
+                    <ul style="display: flex; flex-direction: column;">
+                        <a href="index.html">Bosh sahifa</a>
+                        <a href="ispania.html">Ispaniya</a>
+                        <a href="portugaliya.html">Portugaliya</a>
+                        <a href="taqqoslash.html">Taqqoslash</a>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Qo'shimcha</h3>
+                    <ul style="display: flex; flex-direction: column;">
+                        <a href="geografiya.html">Geografiya</a>
+                        <a href="galereya.html">Galereya</a>
+                        <a href="xulosa.html">Xulosa</a>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pireney Yarimoroli Ta'lim Loyihasi. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
